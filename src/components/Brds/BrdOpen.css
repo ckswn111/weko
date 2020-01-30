@@ -1,0 +1,63 @@
+legend {
+	display: none;
+}
+.tbl_type,
+.tbl_type th,
+.tbl_type td {
+	border: 0;
+}
+.tbl_type {
+	width: 90%;
+	max-width: 1200px;
+	margin: 30px auto;
+	margin-bottom: 0;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	color: inherit;
+	font-size: 16px;
+	table-layout: fixed;
+
+	border-right: solid 1px #999;
+	border-left: solid 1px #999;
+}
+.tbl_type caption {
+	display: none;
+}
+.tbl_type th {
+	padding: 5px 0 4px;
+	border-bottom: solid 1px #d2d2d2;
+	background-color: #f1f1f4;
+	color: #333;
+	font-weight: bold;
+	line-height: 18px;
+	vertical-align: middle;
+}
+.tbl_type td {
+	padding: 8px 0 5px 10px;
+	border-bottom: solid 1px #d2d2d2;
+	text-align: left;
+}
+.tbl_type td.cont {
+	padding: 20px;
+	line-height: 1.4em;
+}
+.commnetBox {
+	width: 90%;
+	max-width: 1200px;
+	margin: 30px auto;
+}
+
+.commentName {
+	font-size: 16px;
+	margin-left: 3px;
+}
+.commentDate {
+	font-size: 14px;
+}
+.commentBody {
+	font-size: 18px;
+}
+.commentReply {
+	font-size: 14px;
+	margin-left: 6px;
+}
