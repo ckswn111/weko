@@ -1,5 +1,6 @@
 .boarder_warp {
-	padding: 50px 0;
+	margin-top: 2%;
+	padding: 1% 0;
 	background: #f5f6f7;
 }
 
@@ -8,4 +9,6 @@
 	max-width: 1260px;
 	margin: 0 auto;
 	font-size: 0;
+	display: flex;
+	flex-wrap: wrap;
 }

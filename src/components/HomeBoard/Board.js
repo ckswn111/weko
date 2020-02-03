@@ -1,28 +1,35 @@
 import React from "react";
-import Bulletine from "./BarodItem";
+import BoardItem from "./BarodItem";
 import "./Board.css";
 import more from "../images/more.png";
+import { Link } from "react-router-dom";
 
-function Board() {
+function Board({ name, data, cat, handleActiveNav }) {
 	return (
 		<div className="board">
 			<div className="board_header">
-				<a href="/" className="board__title">
-					캐나다뉴스
-				</a>
-				<a href="/" className="board__more">
+				<Link to={"/" + cat} className="board__title">
+					{name}
+				</Link>
+				<Link to={"/" + cat} className="board__more">
 					<img src={more} alt="more" />
-				</a>
+				</Link>
 			</div>
 			<div className="board_list">
 				<ul>
-					<Bulletine />
-					<Bulletine />
-					<Bulletine />
-					<Bulletine />
-					<Bulletine />
-					<Bulletine />
-					<Bulletine />
+					{data
+						.slice(0)
+						.reverse()
+						.map(item => {
+							return (
+								<BoardItem
+									key={item.number}
+									item={item}
+									handleActiveNav={handleActiveNav}
+									cat={cat}
+								/>
+							);
+						})}
 				</ul>
 			</div>
 		</div>

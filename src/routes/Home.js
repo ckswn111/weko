@@ -2,11 +2,10 @@ import React from "react";
 
 import BoardsWrap from "../components/HomeBoard/BoardsWrap";
 
-function Home() {
+function Home({ handleActiveNav, data }) {
+	React.useEffect(() => handleActiveNav("home"), []);
 	return (
-		<div>
-			<BoardsWrap />
-		</div>
+		<div>{<BoardsWrap data={data} handleActiveNav={handleActiveNav} />}</div>
 	);
 }
 

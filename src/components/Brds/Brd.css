@@ -3,12 +3,13 @@
 	width: 90%;
 	max-width: 1200px;
 	margin: 0 auto;
+	font-family: "BMHANNAAir";
 }
 
 .brd span {
 	display: inline-block;
-	font-size: 30px;
-	padding-bottom: 10px;
+	font-size: 40px;
+	padding-bottom: 20px;
 	position: relative;
 }
 
@@ -21,15 +22,24 @@
 .brd_head,
 .brd_Item {
 	padding: 10px 0;
+	font-size: 18px;
 }
-
+.brd_Item:hover {
+	background-color: #f5f5f5 !important;
+}
+.brd_Item,
 .brd_head {
-	border-top: 2px solid #ff8c00;
+	font-family: "KOMACON";
+}
+.brd_head {
+	border-top: 2px solid cadetblue; /*border-top: 2px solid #ff8c00*/
 	border-bottom: 1px solid #ccc;
+	padding: 15px 0;
 }
 
 .brd_Item {
 	border-bottom: 1px solid #ccc;
+	padding: 15px 0;
 }
 
 .brd_head > div,
@@ -79,6 +89,7 @@
 .paging_number {
 	font-size: 18px;
 	margin: 0 8px;
+	font-weight: 600;
 }
 .paging_number:hover {
 	text-decoration: underline;
@@ -86,4 +97,14 @@
 
 .on {
 	color: #ff8c00 !important;
+}
+.brd_tag {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 600;
+	margin-right: 5px;
+	color: crimson;
+}
+.brd_item_title {
+	display: inline-block;
 }

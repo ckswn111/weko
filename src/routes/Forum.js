@@ -1,19 +1,18 @@
 import React from "react";
 import Brd from "../components/Brds/Brd";
 
-function News({ handleActiveNav, data }) {
-	React.useEffect(() => handleActiveNav("news"), []);
-
+function Forum({ handleActiveNav, data }) {
+	React.useEffect(() => handleActiveNav("forum"), []);
 	return (
 		<div>
 			<Brd
 				data={data}
-				name="캐나다소식"
-				cat="news"
+				name="자유게시판"
+				cat="forum"
 				handleActiveNav={handleActiveNav}
 			/>
 		</div>
 	);
 }
 
-export default News;
+export default Forum;

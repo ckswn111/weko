@@ -14,11 +14,13 @@ legend {
 	border-top: 1px solid #999;
 	border-bottom: 1px solid #999;
 	color: inherit;
-	font-size: 16px;
+	font-size: 20px;
 	table-layout: fixed;
+	font-family: "KOMACON";
 
+	/* 
 	border-right: solid 1px #999;
-	border-left: solid 1px #999;
+	border-left: solid 1px #999; */
 }
 .tbl_type caption {
 	display: none;
@@ -41,10 +43,28 @@ legend {
 	padding: 20px;
 	line-height: 1.4em;
 }
+
+.table__title {
+	font-weight: 600;
+	color: black !important;
+}
+
+.table__date {
+	font-size: 14px;
+}
+@media (max-width: 950px) {
+	.tbl_type col {
+		width: 0;
+	}
+}
+
+/* comment */
+
 .commnetBox {
 	width: 90%;
 	max-width: 1200px;
 	margin: 30px auto;
+	font-family: "KOMACON";
 }
 
 .commentName {
@@ -60,4 +80,18 @@ legend {
 .commentReply {
 	font-size: 14px;
 	margin-left: 6px;
+	color: #888;
+}
+
+.commentReply:hover {
+	color: black;
+}
+.at {
+	font-size: 15px;
+	margin-right: 10px;
+	color: cadetblue;
+}
+
+.tbl_type th {
+	text-align: center !important;
 }
