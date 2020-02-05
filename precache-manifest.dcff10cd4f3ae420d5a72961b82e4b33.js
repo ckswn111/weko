@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e8fcfe5500e90da6a6eabb8b66e8ba16",
+    "revision": "729f868e10e047cccb6eb16a94fa73dc",
     "url": "/weko/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/weko/static/css/2.9887b5d1.chunk.css"
   },
   {
-    "revision": "34e3712be28386174c6b",
+    "revision": "92eca77988ce603f6ab9",
     "url": "/weko/static/css/main.f328e6c8.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/weko/static/js/2.113b4ad5.chunk.js.LICENSE"
   },
   {
-    "revision": "34e3712be28386174c6b",
-    "url": "/weko/static/js/main.425c62f8.chunk.js"
+    "revision": "92eca77988ce603f6ab9",
+    "url": "/weko/static/js/main.f854cc48.chunk.js"
   },
   {
     "revision": "c7ee58ad4f88382b72ee",
