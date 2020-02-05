@@ -2,6 +2,7 @@ import React from "react";
 import BrdItem from "./BrdItem";
 import "./Brd.css";
 import { Icon, Button } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 function Brd({ name, data, cat, handleActiveNav }) {
 	// console.log("Brd");
@@ -64,12 +65,21 @@ function Brd({ name, data, cat, handleActiveNav }) {
 					<Icon name="angle double right" />
 				</a>
 				<div className="writeButton">
-					<Button animated="fade">
-						<Button.Content visible>글쓰기</Button.Content>
-						<Button.Content hidden>
-							<Icon name="pencil alternate" />
-						</Button.Content>
-					</Button>
+					<Link
+						to={{
+							pathname: "/" + cat + "/write/",
+							name: name,
+							cat: { cat },
+							handleActiveNav: { handleActiveNav }
+						}}
+					>
+						<Button animated>
+							<Button.Content visible>글쓰기</Button.Content>
+							<Button.Content hidden>
+								<Icon name="pencil alternate" />
+							</Button.Content>
+						</Button>
+					</Link>
 				</div>
 			</div>
 		</div>
