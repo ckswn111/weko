@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/weko/static/css/main.f328e6c8.chunk.css",
+    "main.js": "/weko/static/js/main.138cfcd5.chunk.js",
+    "main.js.map": "/weko/static/js/main.138cfcd5.chunk.js.map",
+    "runtime-main.js": "/weko/static/js/runtime-main.2ad88260.js",
+    "runtime-main.js.map": "/weko/static/js/runtime-main.2ad88260.js.map",
+    "static/css/2.9887b5d1.chunk.css": "/weko/static/css/2.9887b5d1.chunk.css",
+    "static/js/2.113b4ad5.chunk.js": "/weko/static/js/2.113b4ad5.chunk.js",
+    "static/js/2.113b4ad5.chunk.js.map": "/weko/static/js/2.113b4ad5.chunk.js.map",
+    "index.html": "/weko/index.html",
+    "precache-manifest.c00fe22ac4162b704908f10a936fa546.js": "/weko/precache-manifest.c00fe22ac4162b704908f10a936fa546.js",
+    "service-worker.js": "/weko/service-worker.js",
+    "static/css/2.9887b5d1.chunk.css.map": "/weko/static/css/2.9887b5d1.chunk.css.map",
+    "static/css/main.f328e6c8.chunk.css.map": "/weko/static/css/main.f328e6c8.chunk.css.map",
+    "static/js/2.113b4ad5.chunk.js.LICENSE": "/weko/static/js/2.113b4ad5.chunk.js.LICENSE",
+    "static/media/avatar.png": "/weko/static/media/avatar.28024190.png",
+    "static/media/Banner1.css": "/weko/static/media/banner3.5a9cb819.jpg",
+    "static/media/semantic.min.css": "/weko/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/logo.png": "/weko/static/media/logo.843693ba.png",
+    "static/media/react-summernote.css": "/weko/static/media/summernote.7e263200.eot"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2ad88260.js",
+    "static/css/2.9887b5d1.chunk.css",
+    "static/js/2.113b4ad5.chunk.js",
+    "static/css/main.f328e6c8.chunk.css",
+    "static/js/main.138cfcd5.chunk.js"
+  ]
+}
