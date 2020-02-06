@@ -3,27 +3,22 @@ import "./BrdOpen.css";
 import { Button, Comment, Form, Header } from "semantic-ui-react";
 import CommentItem from "./CommentItem";
 
-function Brd_Open({ item }) {
-	console.log(item);
+function Brd_Open(props) {
+	console.log("brdOPEN");
+	console.log(props);
 	//{ item }) {
 	// const aitem = item.item;
-	const aitem = {
+	// if (item === undefined) {
+	// 	item = { date: "2020-05-12-13" };
+	// }
+	const item = {
 		number: 4,
 		title: "html과 css로 웹사이트를 만들어요",
 		author: "관리자",
 		date: "2020-01-01-13-32",
 		view: 232,
-		replies: [
-			{
-				name: "안서영",
-				body: "예술적으로 아름답네요!",
-				date: "2020-02-25-13:33",
-				replies: []
-			}
-		]
-	};
-	const test =
-		'안녕하세요 Ready to Combat 울프팀 입니다.\
+		body:
+			'안녕하세요 Ready to Combat 울프팀 입니다.\
 	<br />\
 	금일 오전 7시 부터 진행된 정기점검이 완료되어 현재 정상적으로\
 	서버가 오픈되었습니다. <br />\
@@ -48,7 +43,16 @@ function Brd_Open({ item }) {
 	<img\
 		src="https://clipartart.com/images/big-small-clipart-11.png"\
 		height="150px"\
-	></img>';
+	></img>',
+		replies: [
+			{
+				name: "안서영",
+				body: "예술적으로 아름답네요!",
+				date: "2020-02-25-13:33",
+				replies: []
+			}
+		]
+	};
 	const test2 =
 		'<p><span style="font-family: &quot;Arial Black&quot;;">﻿</span>summernote 2</p>';
 	return (
@@ -84,7 +88,7 @@ function Brd_Open({ item }) {
 						</th>
 
 						<td className="table__date table__">
-							{item.date.substring(0, 10)}
+							{/* {item.date.substring(0, 10)} */ item.date}
 						</td>
 
 						<th className="table__" scope="row">
@@ -98,8 +102,8 @@ function Brd_Open({ item }) {
 						<td
 							colSpan="6"
 							className="cont"
-							// dangerouslySetInnerHTML={{ __html: item.body }}
-							dangerouslySetInnerHTML={{ __html: test }}
+							dangerouslySetInnerHTML={{ __html: item.body }}
+							// dangerouslySetInnerHTML={{ __html: test }}
 						>
 							{/* // {item.body} */}
 						</td>

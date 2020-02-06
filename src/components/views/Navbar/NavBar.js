@@ -20,11 +20,10 @@ function NavBar({ active }) {
 				</div>
 				<div className="mobile_dropdown">
 					<Dropdown
-						text="Menu"
+						// text="Menu"
 						icon="list ul"
 						floating
 						labeled
-						button
 						className="icon"
 					>
 						<Dropdown.Menu>

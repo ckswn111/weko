@@ -108,3 +108,40 @@
 .brd_item_title {
 	display: inline-block;
 }
+
+@media (max-width: 950px) {
+	.brd__author,
+	.brd__date,
+	.brd__reads {
+		display: none !important;
+	}
+	.brd_Item,
+	.brd_head {
+		font-size: 12px;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+	.brd_tag {
+		font-size: 12px;
+	}
+	.brd_head {
+		font-weight: 700;
+	}
+	.paging_number {
+		font-size: 15px;
+		margin: 0 4px;
+	}
+	.writeButton {
+		top: -10px;
+		right: -5px;
+	}
+	.paging > div > a > button {
+		padding: 10px !important;
+	}
+	.paging > div > a > button > div {
+		margin-right: 10px !important;
+	}
+	.brd .brd__title {
+		width: 90%;
+	}
+}

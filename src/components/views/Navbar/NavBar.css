@@ -116,6 +116,22 @@ a {
 	text-decoration: none;
 	color: black !important;
 }
+#root
+	> div
+	> div.header
+	> nav
+	> header
+	> div.mobile_dropdown
+	> div
+	> div.menu.transition.visible {
+	position: absolute !important;
+	left: -60px !important;
+	top: 20px !important;
+}
+#root > div > div.header > nav > header > div.mobile_dropdown > div,
+#root > div > div.header > nav > header > div.mobile_dropdown > div > i {
+	font-size: 30px;
+}
 
 .navBar {
 	height: 100px;

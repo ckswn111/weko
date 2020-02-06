@@ -5,8 +5,8 @@ import { Icon, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 function Brd({ name, data, cat, handleActiveNav }) {
-	// console.log("Brd");
-	// console.log(data);
+	console.log("Brd");
+	console.log(data);
 
 	return (
 		<div className="brd">

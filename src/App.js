@@ -736,7 +736,7 @@ function App() {
 
 	return (
 		<div className="warper_all">
-			<BrowserRouter>
+			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<div className="header">
 					<NavBar active={active} />
 				</div>

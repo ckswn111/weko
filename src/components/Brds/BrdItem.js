@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Brd_Item({ item, handleActiveNav, cat }) {
-	console.log(cat);
+	console.log("brdItem");
+	console.log(item);
 
 	return (
 		<div className="brd_Item">
