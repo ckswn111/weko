@@ -3,7 +3,7 @@
 	width: 46%;
 	background: #fff;
 	margin: 2%;
-	min-width: 360px;
+	/* min-width: 360px; */
 	border: 1px solid #ddd;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -70,6 +70,7 @@
 	font-size: 15px;
 	font-weight: 550;
 	margin-right: 5px;
+	color: crimson;
 }
 .board_item_title {
 	display: inline-block;
@@ -79,7 +80,7 @@
 @media (max-width: 950px) {
 	.board {
 		margin: 0 auto;
-		width: 98%;
+		width: 100%;
 		margin-top: 2%;
 
 		/* min-width: 900px; */
@@ -95,6 +96,10 @@
 		font-size: 15px;
 	}
 	.board_list span {
-		font-size: 10px;
+		display: none;
+	}
+	.board_tag {
+		display: block;
+		font-size: 12px;
 	}
 }

@@ -109,17 +109,37 @@
 	display: inline-block;
 }
 
+div.brd_body > div > div.brd__author > i {
+	margin-right: 3px !important;
+}
+.views__mobile {
+	display: none !important;
+}
+
 @media (max-width: 950px) {
 	.brd__author,
 	.brd__date,
 	.brd__reads {
+		display: inline !important;
+		margin: 10px;
+		font-size: 12px;
+	}
+	.brd_head {
+		padding: 0;
+	}
+	.brd_head > div {
 		display: none !important;
 	}
-	.brd_Item,
-	.brd_head {
-		font-size: 12px;
+	.brd_Item {
+		font-size: 15px;
 		padding-top: 4px;
 		padding-bottom: 4px;
+	}
+	.brd__number {
+		display: none !important;
+	}
+	.brd .brd__title {
+		width: 100%;
 	}
 	.brd_tag {
 		font-size: 12px;
@@ -141,7 +161,8 @@
 	.paging > div > a > button > div {
 		margin-right: 10px !important;
 	}
-	.brd .brd__title {
-		width: 90%;
+	.views__mobile {
+		display: inline !important;
+		font-size: 12px !important;
 	}
 }

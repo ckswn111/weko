@@ -1,6 +1,6 @@
 import React from "react";
 import "./BrdOpen.css";
-import { Button, Comment, Form, Header } from "semantic-ui-react";
+import { Button, Comment, Form, Header, Icon } from "semantic-ui-react";
 import CommentItem from "./CommentItem";
 
 function Brd_Open(props) {
@@ -56,7 +56,8 @@ function Brd_Open(props) {
 	const test2 =
 		'<p><span style="font-family: &quot;Arial Black&quot;;">﻿</span>summernote 2</p>';
 	return (
-		<div>
+		<div className="open_table">
+			<span className="open_title">계시판제목</span>
 			<table cellSpacing="0" border="1" className="tbl_type">
 				<colgroup>
 					<col width="80" />
@@ -68,7 +69,9 @@ function Brd_Open(props) {
 				</colgroup>
 				<thead>
 					<tr>
-						<th scope="row">제목</th>
+						<th className="table_mobile" scope="row">
+							제목
+						</th>
 						<td className="table__title" colSpan="5">
 							{item.title}
 						</td>
@@ -77,25 +80,28 @@ function Brd_Open(props) {
 
 				<tbody>
 					<tr>
-						<th className="table__" scope="row">
+						<th className="table__ table_mobile" scope="row">
 							작성자
 						</th>
 
-						<td className="table__ table__title">{item.author}</td>
+						<td className="table__ table__author">
+							<Icon fitted name="edit outline" color="blue" />
+							시곻나라말사미듕
+						</td>
 
-						<th className="table__" scope="row">
+						<th className="table__ table_mobile" scope="row">
 							작성일
 						</th>
 
 						<td className="table__date table__">
-							{/* {item.date.substring(0, 10)} */ item.date}
+							{/* {item.date.substring(0, 10)} */ item.date.substring(0, 10)}
 						</td>
 
-						<th className="table__" scope="row">
+						<th className="table__ table_mobile" scope="row">
 							조회
 						</th>
 
-						<td className="table__">{item.view}</td>
+						<td className="table__ table_mobile">{item.view}</td>
 					</tr>
 
 					<tr>

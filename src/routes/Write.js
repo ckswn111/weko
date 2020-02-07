@@ -69,7 +69,7 @@ function Write({ location }) {
 				onImageUpload={handleImg}
 				onFocus={onFocus}
 			/>
-			{/* <div dangerouslySetInnerHTML={{ __html: editorHtml }}></div> */}
+			<div dangerouslySetInnerHTML={{ __html: editorHtml }}></div>
 		</div>
 	);
 }

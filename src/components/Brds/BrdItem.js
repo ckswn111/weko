@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Icon } from "semantic-ui-react";
 
-function Brd_Item({ item, handleActiveNav, cat }) {
+function Brd_Item({ item, handleActiveNav, cat, name }) {
 	console.log("brdItem");
 	console.log(item);
 
@@ -13,6 +14,7 @@ function Brd_Item({ item, handleActiveNav, cat }) {
 					to={{
 						pathname: "/" + cat + "/view/" + item.number,
 						item: { item },
+						name: { name },
 						handleActiveNav: { handleActiveNav }
 					}}
 				>
@@ -20,9 +22,15 @@ function Brd_Item({ item, handleActiveNav, cat }) {
 					<div className="brd_item_title">{item.title}</div>
 				</Link>
 			</div>
-			<div className="brd__author">{item.author}</div>
-			<div className="brd__date">{item.date.substring(2, 10)}</div>
-			<div className="brd__reads">{item.view}</div>
+			<div className="brd__author">
+				<Icon fitted name="edit outline" color="blue" />
+				{item.author}
+			</div>
+			<div className="brd__date">{item.date.substring(0, 10)}</div>
+			<div className="brd__reads">
+				<span className="views__mobile">views </span>
+				{item.view}
+			</div>
 		</div>
 	);
 }
