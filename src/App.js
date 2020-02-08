@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from "react";
 import NavBar from "./components/views/Navbar/NavBar";
-import { HashRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import News from "./routes/News";
 import Forum from "./routes/Forum";
@@ -815,7 +815,7 @@ function App() {
 
 	return (
 		<div className="warper_all">
-			<HashRouter basename={process.env.PUBLIC_URL}>
+			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<div className="header">
 					<NavBar active={active} />
 				</div>
@@ -931,7 +931,7 @@ function App() {
 					<Route path="/:cat/write" component={Write} />
 				</div>
 				<div className="footer">WECO Korean Comunity ©2020 </div>
-			</HashRouter>
+			</BrowserRouter>
 		</div>
 	);
 }
