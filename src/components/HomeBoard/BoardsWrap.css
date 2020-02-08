@@ -12,3 +12,12 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+
+@media (max-width: 950px) {
+	.boarder_warp {
+		margin: 0;
+	}
+	.boarder_warp > div {
+		width: 100%;
+	}
+}

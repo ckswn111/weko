@@ -109,17 +109,26 @@ legend {
 @media (max-width: 950px) {
 	td.table__date.table__ {
 		text-align: right;
-		padding-right: 5px;
+		padding-right: 10px;
+	}
+	.tbl_type {
+		margin-top: 6px;
 	}
 	.tbl_type col {
 		width: 0;
 	}
 	.open_table {
+		width: 100%;
+		/* padding-right: 5px;
+		padding-left: 5px; */
 		font-size: 14px;
 	}
 	.open_title {
-		font-size: 30px;
-		padding-bottom: 10px;
+		padding-top: 10px;
+		padding-bottom: 15px;
+		padding-left: 10px;
+		font-size: 35px;
+		margin-top: 0;
 	}
 	.table_mobile {
 		display: none;

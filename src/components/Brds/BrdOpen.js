@@ -57,7 +57,7 @@ function Brd_Open(props) {
 		'<p><span style="font-family: &quot;Arial Black&quot;;">﻿</span>summernote 2</p>';
 	return (
 		<div className="open_table">
-			<span className="open_title">계시판제목</span>
+			<span className="open_title">게시판제목</span>
 			<table cellSpacing="0" border="1" className="tbl_type">
 				<colgroup>
 					<col width="80" />

@@ -31,3 +31,12 @@
 	left: 40px;
 	font-size: 70px;
 }
+
+@media (max-width: 950px) {
+	.banner {
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		box-shadow: none;
+	}
+}
