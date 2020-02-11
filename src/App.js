@@ -768,12 +768,14 @@ const dataIn = {
 };
 
 function App() {
+
+
 	// handleNews();
 	//Database에 넣고 싶을 때 쓰는 function. //handleNews()를 uncommnet처리
 	async function handleNews() {
 		console.log("entered");
 		const NewNewsItem = {
-			id: "12", //Unique String
+			id: "132", //Unique String
 			number: 133, //integer
 			tag: "[Winnipeg]", //String
 			title: "NEW CASTLE", //String
@@ -781,12 +783,37 @@ function App() {
 			date: "2020-02-07", // String
 			view: 433, //integer
 			body: "<div>anyString</div>",
-			replies: [{}, {}, {}] //object
+			replies: ["123", "12", "22"], //array
+			cat: "News"
 		};
 		try {
 			await axios.post(
-				`${config.api.invokeUrl}/news/${NewNewsItem.id}`,
+				`${config.api.invokeUrl}/post`,
 				NewNewsItem
+			);
+		} catch (err) {
+			console.log(`error adding data: ${err}`);
+		}
+	}
+	
+
+	//아놔 업데이트 기능 구현 너무 어려웠음 ㅠㅠ. 지정된 아이디에 바꾸고 싶은 데이타만 changedValue에 넣어주셈 숫자 상관 없음
+	// updateItemsById();
+	async function updateItemsById() {
+		console.log("attempting to start update parameters");
+		const params = {
+			id: "132", //Unique String
+			changedValue: {
+				title: "NEW 22 CASTLE", //String
+				author: "KJ Choi", //String
+				date: "2020-02-10", // String
+				body: "<div>SOMESOME</div>",
+			}
+		};
+		try {
+			await axios.patch(
+				`${config.api.invokeUrl}/post`,
+				params
 			);
 		} catch (err) {
 			console.log(`error adding data: ${err}`);
@@ -796,17 +823,17 @@ function App() {
 	//데이타 베이스 배워서 일단 내가 임의로 넣은걸 콘솔로 띄워봤음 (DynamoDB -> Lambda -> API gateWay -> Here)
 	//load database and console it
 	//ComponentDidMount
-	useEffect(() => {
-		// async function fetch() {
-		// 	try {
-		// 		const res = await axios.get(`${config.api.invokeUrl}/news`);
-		// 		console.log(res.data);
-		// 	} catch (err) {
-		// 		console.log(`error recieving data: ${err}`);
-		// 	}
-		// }
-		// fetch();
-	}, []);
+	// useEffect(() => {
+	// 	async function fetch() {
+	// 		try {
+	// 			const res = await axios.get(`${config.api.invokeUrl}/post`);
+	// 			console.log(res.data);
+	// 		} catch (err) {
+	// 			console.log(`error recieving data: ${err}`);
+	// 		}
+	// 	}
+	// 	fetch();
+	// }, []);
 
 	const [data, setData] = useState(dataIn);
 	// console.log(data);
