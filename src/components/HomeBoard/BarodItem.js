@@ -1,16 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function BoardItem({ item, cat, handleActiveNav }) {
-	// console.log(item.title);
-
+function BoardItem({ item, cat }) {
 	return (
 		<li>
 			<Link
 				to={{
 					pathname: "/" + cat + "/view/" + item.number,
-					item: { item },
-					handleActiveNav: { handleActiveNav }
+					item: { item }
 				}}
 			>
 				<div className="board_item_title">
@@ -18,6 +15,7 @@ function BoardItem({ item, cat, handleActiveNav }) {
 						<img
 							style={{ height: "9px", marginRight: "3px" }}
 							src="https://img.icons8.com/ios-filled/50/ff0000/n.png"
+							alt="new"
 						/>
 						[3]
 					</div>

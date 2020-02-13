@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./NavBar.css";
 
 import { Link } from "react-router-dom";
 import logo from "../../images/logo.png";
 import { Dropdown } from "semantic-ui-react";
+import { useGlobalState } from "../../../state.js";
 
-function NavBar({ active }) {
+function NavBar() {
+	const [currentNav] = useGlobalState("currentNav");
 	return (
 		<nav className="navBar">
 			<header>
@@ -14,9 +16,6 @@ function NavBar({ active }) {
 					<Link to="/">
 						<img src={logo} alt="logo" />
 					</Link>
-					{/* <Link to="/" className="title_letter">
-						WEKO
-					</Link> */}
 				</div>
 				<div className="mobile_dropdown">
 					<Dropdown
@@ -44,22 +43,22 @@ function NavBar({ active }) {
 				</div>
 
 				<ul className="menu">
-					<li className={active === "news" ? "active" : ""}>
+					<li className={currentNav === "news" ? "active" : ""}>
 						<Link to="/news">
 							<span>캐나다소식</span>
 						</Link>
 					</li>
-					<li className={active === "forum" ? "active" : ""}>
+					<li className={currentNav === "forum" ? "active" : ""}>
 						<Link to="/forum">
 							<span>자유게시판</span>
 						</Link>
 					</li>
-					<li className={active === "buysell" ? "active" : ""}>
+					<li className={currentNav === "buysell" ? "active" : ""}>
 						<Link to="/buysell">
 							<span>온라인장터</span>
 						</Link>
 					</li>
-					<li className={active === "info" ? "active" : ""}>
+					<li className={currentNav === "info" ? "active" : ""}>
 						<Link to="/info">
 							<span>정보/팁</span>
 						</Link>
