@@ -5,7 +5,7 @@ import more from "../images/more.png";
 import { Link } from "react-router-dom";
 // import { Image, Item } from "semantic-ui-react";
 
-function Board({ name, data, cat, handleActiveNav }) {
+function Board({ name, data, cat }) {
 	return (
 		<div className="board">
 			<div className="board_header">
@@ -22,14 +22,7 @@ function Board({ name, data, cat, handleActiveNav }) {
 						.slice(0)
 						.reverse()
 						.map(item => {
-							return (
-								<BoardItem
-									key={item.number}
-									item={item}
-									handleActiveNav={handleActiveNav}
-									cat={cat}
-								/>
-							);
+							return <BoardItem key={item.number} item={item} cat={cat} />;
 						})}
 					{/* <Item.Group>
 					{data

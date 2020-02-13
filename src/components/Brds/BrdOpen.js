@@ -2,15 +2,33 @@ import React from "react";
 import "./BrdOpen.css";
 import { Button, Comment, Form, Header, Icon } from "semantic-ui-react";
 import CommentItem from "./CommentItem";
+import { useGlobalState, setNavName } from "../../state.js";
+import { Link } from "react-router-dom";
 
-function Brd_Open(props) {
-	console.log("brdOPEN");
-	console.log(props);
-	//{ item }) {
-	// const aitem = item.item;
-	// if (item === undefined) {
-	// 	item = { date: "2020-05-12-13" };
-	// }
+function Brd_Open() {
+	const [currentNav] = useGlobalState("currentNav");
+	React.useEffect(() => {
+		var currentURL = window.location.pathname.split("/")[1];
+		if (currentURL !== currentNav) {
+			setNavName(currentURL);
+		}
+	});
+	var name;
+	switch (currentNav) {
+		case "news":
+			name = "캐나다소식";
+			break;
+		case "forum":
+			name = "자유게시판";
+			break;
+		case "info":
+			name = "정보/팁";
+			break;
+		case "buysell":
+			name = "온라인장터";
+			break;
+	}
+
 	const item = {
 		number: 4,
 		title: "html과 css로 웹사이트를 만들어요",
@@ -53,11 +71,12 @@ function Brd_Open(props) {
 			}
 		]
 	};
-	const test2 =
-		'<p><span style="font-family: &quot;Arial Black&quot;;">﻿</span>summernote 2</p>';
+
 	return (
 		<div className="open_table">
-			<span className="open_title">게시판제목</span>
+			<span className="open_title">
+				<Link to={"/" + currentNav}>{name}</Link>
+			</span>
 			<table cellSpacing="0" border="1" className="tbl_type">
 				<colgroup>
 					<col width="80" />
@@ -122,7 +141,6 @@ function Brd_Open(props) {
 						Comments (0)
 					</Header>
 					{item.replies.map((rep, i) => {
-						console.log(rep.name);
 						return (
 							<CommentItem
 								key={i}

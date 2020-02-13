@@ -15,7 +15,7 @@ import Write from "./routes/Write";
 import axios from "axios";
 const config = require("./config.json");
 
-const dataIn = {
+const data = {
 	news: [
 		{
 			number: 1,
@@ -911,125 +911,62 @@ function App() {
 	// 	fetch();
 	// }, []);
 
-	const [data, setData] = useState(dataIn);
 	// console.log(data);
-
-	const [active, setActive] = useState("home");
 
 	return (
 		<div className="warper_all">
-			<BrowserRouter basename={process.env.PUBLIC_URL}>
+			<BrowserRouter>
 				<div className="header">
-					<NavBar active={active} />
+					<NavBar />
 				</div>
 				<div className="container_body">
 					<Banner1 />
-					<Route
-						path="/"
-						exact={true}
-						render={() => (
-							<Home data={data} handleActiveNav={setActive} active={active} />
-						)}
-					/>
+					<Route path="/" exact={true} render={() => <Home data={data} />} />
 					<Route
 						path="/news"
 						exact={true}
-						render={() => (
-							<News
-								data={data.news}
-								handleActiveNav={setActive}
-								active={active}
-							/>
-						)}
+						render={() => <News data={data.news} />}
 					/>
 					<Route
 						path="/news/view"
 						exact={true}
-						render={() => (
-							<News
-								data={data.news}
-								handleActiveNav={setActive}
-								active={active}
-							/>
-						)}
+						render={() => <News data={data.news} />}
 					/>
 					<Route
 						path="/news/view/:id"
 						// exact={true}
-						render={() => (
-							<NewsView
-								data={data.news}
-								handleActiveNav={setActive}
-								active={active}
-							/>
-						)}
+						render={() => <NewsView data={data.news} />}
 					/>
 					{/* <Route path="/news/view/:id" component={NewsView} /> */}
 					<Route
 						path="/forum"
 						exact={true}
-						render={() => (
-							<Forum
-								data={data.forum}
-								handleActiveNav={setActive}
-								active={active}
-							/>
-						)}
+						render={() => <Forum data={data.forum} />}
 					/>
 					<Route
 						path="/forum/view/:id"
 						// exact={true}
-						render={() => (
-							<ForumView
-								data={data.forum}
-								handleActiveNav={setActive}
-								active={active}
-							/>
-						)}
+						render={() => <ForumView data={data.forum} />}
 					/>
 					<Route
 						path="/buysell"
 						exact={true}
-						render={() => (
-							<BuySell
-								data={data.buysell}
-								handleActiveNav={setActive}
-								active={active}
-							/>
-						)}
+						render={() => <BuySell data={data.buysell} />}
 					/>
 					<Route
 						path="/buysell/view/:id"
 						// exact={true}
-						render={() => (
-							<BuySellView
-								data={data.buysell}
-								handleActiveNav={setActive}
-								active={active}
-							/>
-						)}
+						render={() => <BuySellView data={data.buysell} />}
 					/>
 					<Route
 						path="/info"
 						exact={true}
-						render={() => (
-							<InfoTips
-								data={data.info}
-								handleActiveNav={setActive}
-								active={active}
-							/>
-						)}
+						render={() => <InfoTips data={data.info} />}
 					/>
 					<Route
 						path="/info/view/:id"
 						// exact={true}
-						render={() => (
-							<InfoTipsView
-								data={data.info}
-								handleActiveNav={setActive}
-								active={active}
-							/>
-						)}
+						render={() => <InfoTipsView data={data.info} />}
 					/>
 					<Route path="/:cat/write" component={Write} />
 				</div>
